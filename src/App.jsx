@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import {
+  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs,
+  FaGithub, FaLinkedin, FaEnvelope, FaTwitter,
+  FaInstagram, FaWhatsapp, FaTelegram, FaFacebook, FaYoutube
+} from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiExpress, SiNextdotjs } from 'react-icons/si';
 import ParticleBackground from './components/ParticleBackground';
 import SkillCard from './components/SkillCard';
@@ -61,6 +65,22 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Image */}
+            <motion.div
+              className="profile-image-container"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="profile-image glass">
+                {/* Replace this src with your actual image path */}
+                <img
+                  src="https://via.placeholder.com/200/0a0a0f/00f5ff?text=Your+Photo"
+                  alt="Tarek Profile"
+                />
+              </div>
+            </motion.div>
+
             <motion.h1
               className="hero-title"
               initial={{ opacity: 0, y: 20 }}
@@ -225,6 +245,24 @@ function App() {
                 </a>
                 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                   <FaLinkedin />
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
+                  <FaTwitter />
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                  <FaInstagram />
+                </a>
+                <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                  <FaFacebook />
+                </a>
+                <a href="https://youtube.com/@yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube">
+                  <FaYoutube />
+                </a>
+                <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                  <FaWhatsapp />
+                </a>
+                <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram">
+                  <FaTelegram />
                 </a>
               </div>
             </div>
